@@ -1,6 +1,0 @@
-/Users/asifrezachowdhury/Library/CloudStorage/OneDrive-Personal/Academics/QUT Academics/Semester 1-2/IFN563 OOD/Assignment/n10891188_final/BoardGame/BoardGame/bin/Debug/BoardGame.exe
-/Users/asifrezachowdhury/Library/CloudStorage/OneDrive-Personal/Academics/QUT Academics/Semester 1-2/IFN563 OOD/Assignment/n10891188_final/BoardGame/BoardGame/bin/Debug/BoardGame.pdb
-/Users/asifrezachowdhury/Library/CloudStorage/OneDrive-Personal/Academics/QUT Academics/Semester 1-2/IFN563 OOD/Assignment/n10891188_final/BoardGame/BoardGame/obj/Debug/BoardGame.csproj.AssemblyReference.cache
-/Users/asifrezachowdhury/Library/CloudStorage/OneDrive-Personal/Academics/QUT Academics/Semester 1-2/IFN563 OOD/Assignment/n10891188_final/BoardGame/BoardGame/obj/Debug/BoardGame.csproj.CoreCompileInputs.cache
-/Users/asifrezachowdhury/Library/CloudStorage/OneDrive-Personal/Academics/QUT Academics/Semester 1-2/IFN563 OOD/Assignment/n10891188_final/BoardGame/BoardGame/obj/Debug/BoardGame.exe
-/Users/asifrezachowdhury/Library/CloudStorage/OneDrive-Personal/Academics/QUT Academics/Semester 1-2/IFN563 OOD/Assignment/n10891188_final/BoardGame/BoardGame/obj/Debug/BoardGame.pdb
