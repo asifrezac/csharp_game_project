@@ -36,7 +36,8 @@ namespace BoardGame
             // 9.  Check winning move will validate from where the player position
 
             // default values
-            int boardGameSize = 7;
+            int boardGameSizeRow = 7;
+            int boardGameSizeColumn = 7;
             int winInARow = 4;
             bool keepLooping = true;
 
@@ -47,7 +48,12 @@ namespace BoardGame
                 Console.WriteLine("Welcome to our game.");
                 Console.Write("Please select the game board size by selecting a numeric value: ");
 
-                if (!int.TryParse(Console.ReadLine(), out var userBoardSize))
+                /*
+                 *Selecting Row for the game board
+                 *
+                */
+                Console.WriteLine("Enter the Size (Row) of the game board");
+                if (!int.TryParse(Console.ReadLine(), out var userBoardSizeRow))
                 {
                     Console.WriteLine();
                     Console.WriteLine("Please select a numeric value!");
@@ -57,7 +63,29 @@ namespace BoardGame
                     continue;
                 }
 
-                Console.Write($"Please select the game win in a row must be smaller than {userBoardSize} : ");
+                /*
+                 *Selecting Column for the game board
+                 *
+                */
+
+                Console.WriteLine("Enter the Size (Column) of the game board");
+                if (!int.TryParse(Console.ReadLine(), out var userBoardSizeColumn))
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Please select a numeric value!");
+                    Console.WriteLine("Select any key to start over.");
+                    Console.Read();
+
+                    continue;
+                }
+                if (userBoardSizeRow > userBoardSizeColumn)
+                {
+                    Console.Write($"Please select the game win in a row must be smaller than {userBoardSizeColumn} : ");
+                } else 
+                {
+                    Console.Write($"Please select the game win in a row must be smaller than {userBoardSizeRow} : ");
+
+                }
 
                 if (!int.TryParse(Console.ReadLine(), out var userWinInARow))
                 {
@@ -69,8 +97,9 @@ namespace BoardGame
                     continue;
                 }
 
-                boardGameSize = userBoardSize;
-                winInARow = userWinInARow;
+                boardGameSizeRow = userBoardSizeRow;
+                boardGameSizeColumn = userBoardSizeColumn;
+                // winInARow = userWinInARow;
 
                 keepLooping = false;
             }
@@ -89,7 +118,7 @@ namespace BoardGame
             //DrawGameboard(board);
 
             int currentPlayer = -1;
-            AnyInARowGameEngine gameEngine = new AnyInARowGameEngine(boardGameSize, boardGameSize, winInARow)
+            AnyInARowGameEngine gameEngine = new AnyInARowGameEngine(boardGameSizeRow, boardGameSizeColumn, winInARow)
             {
                 GameStatus = 0
             };
@@ -111,7 +140,7 @@ namespace BoardGame
                     Console.Write("Please select a numeric value for the row: ");
 
                     int userInputRow = Convert.ToInt32(Console.ReadLine()) - 1;
-
+                    
                     Console.Write("Please select a numeric value for the column: ");
 
                     int userInputCol = Convert.ToInt32(Console.ReadLine()) - 1;

@@ -20,7 +20,7 @@ namespace BoardGame
         private void InitGameBoard(int gameBoardRows, int gameBoardColumns)
         {
             _gameBoard = new int[gameBoardRows, gameBoardColumns];
-
+            
             for (int row = 0; row < _gameBoard.GetLength(0); row++)
             {
                 for (int col = 0; col < _gameBoard.GetLength(1); col++)
@@ -65,6 +65,7 @@ namespace BoardGame
             GameResult gameResult = new GameResult();
 
             gameResult.ValidMove = false;
+
 
             if (userInputRow < gameBoard.GetLength(0) && userImputCol < gameBoard.GetLength(1))
             {
@@ -275,7 +276,7 @@ namespace BoardGame
         {
             int currentCell = board[currentRow, currentCol];
             int compareCell = board[compareRow, compareCol];
-
+            
             // compare
             if (currentCell.Equals(compareCell) && !currentCell.Equals(0))
             {
